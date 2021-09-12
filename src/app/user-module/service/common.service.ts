@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { LoggerService } from './logger.service';
 import { UserService } from './user.service';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class CommonService {
   constructor(
     private loggerService: LoggerService,

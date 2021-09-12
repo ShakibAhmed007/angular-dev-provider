@@ -7,7 +7,6 @@ import { CommonService } from './service/common.service';
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [UserComponent],
-  exports: [UserComponent],
-  providers: [CommonService]
+  exports: [UserComponent]
 })
 export class UserModule {}
