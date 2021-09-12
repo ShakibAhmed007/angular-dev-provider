@@ -9,7 +9,6 @@ import { LoggerService } from './service/logger.service';
 @NgModule({
   imports: [BrowserModule, FormsModule],
   declarations: [UserComponent],
-  exports: [UserComponent],
-  providers: [{ provide: LoggerService, useClass: EvenBetterLoggerService }]
+  exports: [UserComponent]
 })
 export class UserModule {}
