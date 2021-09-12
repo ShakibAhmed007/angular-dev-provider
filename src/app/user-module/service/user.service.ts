@@ -6,4 +6,9 @@ import { UserModule } from '../user.module';
 })
 export class UserService {
   constructor() {}
+
+  printUser() {
+    console.log('User Service is waorking !!! ');
+    alert('User Service is working !!! ');
+  }
 }
