@@ -1,5 +1,6 @@
 import { Component, VERSION } from '@angular/core';
 import { LoggerService } from './user-module/service/logger.service';
+import { UserService } from './user-module/service/user.service';
 
 @Component({
   selector: 'my-app',
@@ -8,9 +9,16 @@ import { LoggerService } from './user-module/service/logger.service';
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
-  constructor(private loggerService: LoggerService) {}
+  constructor(
+    private loggerService: LoggerService,
+    private userService: UserService
+  ) {}
 
-  showLog() {
+  showLoggerServiceLog() {
+    this.loggerService.log();
+  }
+
+  showUserServiceLog() {
     this.loggerService.log();
   }
 }
