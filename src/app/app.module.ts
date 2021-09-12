@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { UserModule } from './user-module/user-module.module';
+import { UserModule } from './user-module/user.module';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, UserModule],
