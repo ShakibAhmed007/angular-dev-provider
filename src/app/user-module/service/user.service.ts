@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { UserModule } from '../user.module';
 
 @Injectable({
-  providedIn: UserModule
+  providedIn: UserModule // provider scope
 })
 export class UserService {
   constructor() {}

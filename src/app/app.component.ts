@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { CommonService } from './user-module/service/common.service';
 import { LoggerService } from './user-module/service/logger.service';
 import { UserService } from './user-module/service/user.service';
 
@@ -11,7 +12,8 @@ export class AppComponent {
   name = 'Angular ' + VERSION.major;
   constructor(
     private loggerService: LoggerService,
-    private userService: UserService
+    private userService: UserService,
+    private commonService: CommonService
   ) {}
 
   showLoggerServiceLog() {
@@ -19,6 +21,10 @@ export class AppComponent {
   }
 
   showUserServiceLog() {
-    this.loggerService.log();
+    this.userService.printUser();
+  }
+
+  showCommonServiceLog() {
+    this.commonService.printData();
   }
 }
