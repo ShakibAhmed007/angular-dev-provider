@@ -11,7 +11,7 @@ import { UserService } from './user-module/service/user.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
+  name = 'Angular providers';
   constructor(
     private loggerService: LoggerService,
     private userService: UserService,
