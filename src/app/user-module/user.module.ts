@@ -7,6 +7,7 @@ import { EvenBetterLoggerService } from './service/even-better-logger.service';
 import { LoggerService } from './service/logger.service';
 import { AlertService } from './service/alert.service';
 import { EvenBetterAlertService } from './service/even-better-alert.service';
+import { USER_CONFIG } from './user.config';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -15,7 +16,8 @@ import { EvenBetterAlertService } from './service/even-better-alert.service';
   providers: [
     EvenBetterAlertService,
     { provide: EvenBetterLoggerService, useClass: EvenBetterLoggerService },
-    { provide: AlertService, useExisting: EvenBetterAlertService }
+    { provide: AlertService, useExisting: EvenBetterAlertService },
+    { provide: USER_CONFIG, useValue: USER_CONFIG }
   ]
 })
 export class UserModule {}
